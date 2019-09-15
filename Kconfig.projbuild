@@ -1,14 +1,10 @@
-menu "Example Configuration"
+menu "Websocket Component Configuration"
 
-config BLINK_GPIO
-    int "Blink GPIO number"
-	range 0 34
-	default 5
+config Websocket Endpoint
+    string "websocket endpoint adress"
+	default ws://localhost:8080/someServer/someThing
 	help
-		GPIO number (IOxx) to blink on and off.
-
-		Some GPIOs are used for other purposes (flash connections, etc.) and cannot be used to blink.
-
-		GPIOs 35-39 are input-only so cannot be used as outputs.
+		enter the address of the websocket server that you want
+		to connect to
 
 endmenu
